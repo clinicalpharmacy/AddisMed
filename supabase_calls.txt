@@ -1,0 +1,22 @@
+D:/cpat/src/pages/AdminDashboard.jsx:      const { data, error } = await supabase.from("users").select("*");
+D:/cpat/src/pages/AdminDashboard.jsx:      const { data, error } = await supabase.from("medication_information").select("*").order("name");
+D:/cpat/src/pages/AdminDashboard.jsx:      const { data, error } = await supabase.from("home_remedies").select("*").order("name");
+D:/cpat/src/pages/AdminDashboard.jsx:      const { data, error } = await supabase.from("minor_illnesses").select("*").order("name");
+D:/cpat/src/pages/AdminDashboard.jsx:      const { data, error } = await supabase.from("extemporaneous_preparations").select("*").order("name");
+D:/cpat/src/pages/AdminDashboard.jsx:      const { data, error } = await supabase.from("resource_links").select("*");
+D:/cpat/src/pages/AdminDashboard.jsx:        const { error } = await supabase.from("resource_links").insert([
+D:/cpat/src/pages/AdminDashboard.jsx:      const { error } = await supabase.from("user_agreement").insert([
+D:/cpat/src/pages/AdminDashboard.jsx:        const { error } = await supabase.from('medication_information').insert([medicationData]);
+D:/cpat/src/pages/AdminDashboard.jsx:        const { error } = await supabase.from('home_remedies').insert([homeRemedyData]);
+D:/cpat/src/pages/AdminDashboard.jsx:        const { error } = await supabase.from('minor_illnesses').insert([minorIllnessData]);
+D:/cpat/src/pages/AdminDashboard.jsx:        const { error } = await supabase.from('extemporaneous_preparations').insert([preparationData]);
+D:/cpat/src/pages/AppointmentsTable.jsx:    const { data, error } = await supabase.from("patients").select("appointments_history");
+D:/cpat/src/pages/Home.jsx:      const { data, error } = await supabase.from("resource_links").select("*");
+D:/cpat/src/pages/Home.jsx:      const { error } = await supabase.from("patients").insert([newPatient]);
+D:/cpat/src/pages/NumberOfPatientsDashboard.jsx:      const { data: users, error: usersError } = await supabase.from("users").select("id, full_name, email, auth_uid");
+D:/cpat/src/pages/NumberOfPatientsDashboard.jsx:      const { data: patients, error: patientsError } = await supabase.from("patients").select("id, created_by");
+D:/cpat/src/pages/NumberOfPatientsDashboard.jsx:        const { data: users, error: usersError } = await supabase.from("users").select("id, full_name, email");
+D:/cpat/src/pages/NumberOfPatientsDashboard.jsx:        const { data: patients, error: patientsError } = await supabase.from("patients").select("id, created_by");
+D:/cpat/src/pages/RespectiveTypeDashboard.jsx:      const { data, error } = await supabase.from("patients").select("drn_assessment");
+D:/cpat/src/pages/Signup.jsx:      await supabase.from("users").insert([{
+D:/cpat/src/utils/supabaseTest.js:  const { data, error } = await supabase.from('medication_information').select('*');

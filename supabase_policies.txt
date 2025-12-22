@@ -1,0 +1,29 @@
+D:/cpat/src/App.jsx:// Function to check if the admin is authenticated
+D:/cpat/src/pages/AdminDashboard.jsx:    await supabase.auth.signOut();
+D:/cpat/src/pages/AdminLogin.jsx:      // ✅ Store authentication token
+D:/cpat/src/pages/AdminLogin.jsx:      localStorage.setItem("adminToken", "authenticated");
+D:/cpat/src/pages/Home.jsx:      const { data, error } = await supabase.auth.getUser();
+D:/cpat/src/pages/Home.jsx:      const { data: { user } } = await supabase.auth.getUser();
+D:/cpat/src/pages/Home.jsx:        throw new Error("User not authenticated!");
+D:/cpat/src/pages/Home.jsx:      await supabase.auth.signOut();
+D:/cpat/src/pages/Home.jsx:      const { data: { user } } = await supabase.auth.getUser();
+D:/cpat/src/pages/Home.jsx:        throw new Error("User not authenticated!");
+D:/cpat/src/pages/Home.jsx:      const { data: { user } } = await supabase.auth.getUser();
+D:/cpat/src/pages/Home.jsx:        throw new Error("User not authenticated!");
+D:/cpat/src/pages/Home.jsx:      const { data: { user } } = await supabase.auth.getUser();
+D:/cpat/src/pages/Home.jsx:        throw new Error("User not authenticated!");
+D:/cpat/src/pages/NumberOfPatientsDashboard.jsx:      // First get all auth users to understand the ID format
+D:/cpat/src/pages/NumberOfPatientsDashboard.jsx:      const { data: authUsers, error: authError } = await supabase.auth.admin.listUsers();
+D:/cpat/src/pages/NumberOfPatientsDashboard.jsx:      if (authError) throw authError;
+D:/cpat/src/pages/NumberOfPatientsDashboard.jsx:      const { data: users, error: usersError } = await supabase.from("users").select("id, full_name, email, auth_uid");
+D:/cpat/src/pages/NumberOfPatientsDashboard.jsx:        // First try to match by auth_uid if available
+D:/cpat/src/pages/NumberOfPatientsDashboard.jsx:        if (user.auth_uid) {
+D:/cpat/src/pages/NumberOfPatientsDashboard.jsx:          patientCount = patients.filter(p => p.created_by === user.auth_uid).length;
+D:/cpat/src/pages/NumberOfPatientsDashboard.jsx:        // If no auth_uid field, try to find a matching auth user by email
+D:/cpat/src/pages/NumberOfPatientsDashboard.jsx:          // Find the auth user with matching email
+D:/cpat/src/pages/NumberOfPatientsDashboard.jsx:          const authUser = authUsers.users.find(au => au.email === user.email);
+D:/cpat/src/pages/NumberOfPatientsDashboard.jsx:          if (authUser) {
+D:/cpat/src/pages/NumberOfPatientsDashboard.jsx:            patientCount = patients.filter(p => p.created_by === authUser.id).length;
+D:/cpat/src/pages/Signup.jsx:      const { data: authData, error: authError } = await supabase.auth.signUp({
+D:/cpat/src/pages/Signup.jsx:      if (authError) {
+D:/cpat/src/pages/Signup.jsx:        setErrorMessage("Error signing up: " + authError.message);
